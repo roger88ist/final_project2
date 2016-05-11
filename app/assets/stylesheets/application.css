@@ -16,6 +16,10 @@
 
 /*----------------------------------------*/
 /* THIS STARTS CODE FOR TEMPORARY MAP BOX */
+#separation {
+	height: 75px;
+}
+
 #map {
 	width: 300px;
 	height: 300px;
