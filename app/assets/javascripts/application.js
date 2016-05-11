@@ -17,11 +17,22 @@
 
 var map;
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
-}
+       var map = new google.maps.Map(document.getElementById('map'), {zoom: 8});
+       var geocoder = new google.maps.Geocoder;
+       geocoder.geocode({'address': 'Miami'}, function(results, status) {
+         if (status === google.maps.GeocoderStatus.OK) {
+           map.setCenter(results[0].geometry.location);
+           new google.maps.Marker({
+             map: map,
+             position: results[0].geometry.location
+           });
+         } else {
+           window.alert('Geocode was not successful for the following reason: ' +
+               status);
+         }
+       });
+     }
+
 function detectBrowser() {
   var useragent = navigator.userAgent;
   var mapdiv = document.getElementById("map");
