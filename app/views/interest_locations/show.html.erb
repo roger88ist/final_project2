@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @interest_location.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @interest_location.latitude %>
+</p>
+
+<p>
+  <strong>Box radius:</strong>
+  <%= @interest_location.box_radius %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @interest_location.user %>
+</p>
+
+<%= link_to 'Edit', edit_interest_location_path(@interest_location) %> |
+<%= link_to 'Back', interest_locations_path %>

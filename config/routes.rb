@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :interest_locations
   resources :tickets
   resources :users
   root 'tickets#index'
