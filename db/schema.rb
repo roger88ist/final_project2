@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511001123) do
+ActiveRecord::Schema.define(version: 20160511010338) do
+
+  create_table "interest_locations", force: :cascade do |t|
+    t.float    "longitude"
+    t.float    "latitude"
+    t.integer  "box_radius"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "interest_locations", ["user_id"], name: "index_interest_locations_on_user_id"
 
   create_table "tickets", force: :cascade do |t|
     t.string   "day"
