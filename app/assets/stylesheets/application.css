@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+/*----------------------------------------*/
+/* THIS STARTS CODE FOR TEMPORARY MAP BOX */
+#map {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	border: 5px solid black;
+}
+
+ul {
+	list-style: none;
+	font-size: 40px;
+	font-weight: bold;
+	margin-left: 30px;
+}
+
+li {
+	padding: 20px;
+}
+
+/*THIS ENDS CODE FOR TEMPORARY MAP BOX*/
+/*----------------------------------------*/
+
+
+
+
+
